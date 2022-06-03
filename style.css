@@ -1,0 +1,117 @@
+body {
+  background-color: #fafafa;
+  color: #111111;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.website {
+  margin: 0 auto 20px;
+  width: 1000px;
+}
+.topo {
+  font-size: 48px;
+  font-weight: bold;
+}
+.topo-mobile {
+  border-bottom: 1px #eaeaea;
+  display: none;
+  height: 64px;
+}
+.menu {
+  display: flex;
+}
+.menu .item {
+  background-color: #ffffff;
+  border-left: none;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.menu .item:first-child {
+  border-bottom-left-radius: 5px;
+  border-left: 1px solid #eaeaea;
+  border-top-left-radius: 5px;
+}
+.menu .item:last-child {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.menu .item.selecionado {
+  background-color: #aa4653;
+  color: #ffffff;
+  font-weight: bold;
+}
+.menu .item:not(.selecionado):hover {
+  background-color: #b12c3e;
+  color: #ffffff;
+  font-weight: bold;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.posts .post {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.1s ease;
+  width: 300px;
+}
+.posts .post strong {
+  word-break: break-all;
+}
+.posts .post strong:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+.posts .post img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 184px;
+  object-fit: cover;
+  width: 298px;
+
+  /* como a imagem original não tem dimensões 298x184
+     * ou outra resolução com mesma proporção, ela ficaria
+     * esticada. o 
+     * esticada, e corta a imagem de forma que caiba nas
+     * dimensões especificadas aqui no CSS */
+}
+.posts .post:hover {
+  box-shadow: 0px 0px 10px 0px #eeeeee;
+}
+.posts .post .conteudo {
+  padding: 20px;
+}
+.posts .post .titulo {
+  color: #aa4653;
+  font-size: 29px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 1000px) {
+  .topo {
+    display: none;
+  }
+  .topo-mobile {
+    display: initial;
+  }
+  .website {
+    width: 100vw;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .posts .post {
+    width: 100vw;
+  }
+  .posts .post img {
+    width: 100vw;
+  }
+}
