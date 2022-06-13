@@ -102,16 +102,21 @@ body {
   .topo-mobile {
     display: initial;
   }
-  .website {
-    width: 100vw;
+  .website{
+      width: 100vw;
+      margin: 0 auto 20px;
   }
-  .menu {
-    flex-direction: column;
+  .menu{
+      flex-direction: column;
+      width: 100vw;
   }
-  .posts .post {
-    width: 100vw;
+  .posts{
+      flex-direction: column;
   }
-  .posts .post img {
-    width: 100vw;
+  .posts .post{
+      width: 100vw;
+  }
+  .posts .post img{
+      width: 100vw;
   }
 }
